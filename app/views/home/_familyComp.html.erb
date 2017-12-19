@@ -1,0 +1,21 @@
+<% if @familyComp == 'self'%>
+				
+	How old are you?
+	<%= text_field_tag :age, nil, placeholder: "ex: 41", id: "age" %>
+	<%= hidden_field_tag :nAdults, 1 %>
+	<%= hidden_field_tag :nKids, 0 %>	
+
+<% elsif @familyComp == 'family' %>
+	How many adults are in the household?
+	<%= text_field_tag :nAdults, nil, placeholder: "ex: 2", id: "nAdults" %></br>
+	How many children (17 or younger, that you claim as a dependent on your taxes)?
+	<%= text_field_tag :nKids, nil, placeholder: "ex: 3", id: "nKids" %>
+	<%= hidden_field_tag :age, "Family Option" %>	
+	
+<% else %>
+	How many children (17 or younger, that you claim as a dependent on your taxes) are in the household?
+	<%= hidden_field_tag :nAdults, 0 %>
+	<%= text_field_tag :nKids, nil, placeholder: "ex: 3", id: "nKids" %>
+	<%= hidden_field_tag :age, "Family Option" %>	
+	
+<% end %>

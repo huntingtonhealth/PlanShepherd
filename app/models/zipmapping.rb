@@ -1,0 +1,2 @@
+class Zipmapping < ApplicationRecord
+end

@@ -1,0 +1,63 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  BusinessYear: MyText
+  StateCode: MyText
+  IssuerID: MyText
+  SourceName: MyText
+  VersionNum: MyText
+  StandardComponentID: MyText
+  PlanID: MyText
+  BenefitName: MyText
+  CopayInntier1: MyText
+  CopayInntier2: MyText
+  CopayOutofNet: MyText
+  CoinsInntier1: MyText
+  CoinsInntier2: MyText
+  CoinsOutofNet: MyText
+  IsEHB: MyText
+  IsStateMandate: MyText
+  IsCovered: MyText
+  QuantLimitOnSvc: MyText
+  LimitQty: MyText
+  LimitUnit: MyText
+  MinimumStay: MyText
+  Exclusions: MyText
+  Explanation: MyText
+  EHBVarReason: MyText
+  IsSubjtoDedtier1: MyText
+  IsSubjtoDedtier2: MyText
+  IsExclFromInnMOOP: MyText
+  IsExclFromOonMOOP: MyText
+  RowNumber: MyText
+
+two:
+  BusinessYear: MyText
+  StateCode: MyText
+  IssuerID: MyText
+  SourceName: MyText
+  VersionNum: MyText
+  StandardComponentID: MyText
+  PlanID: MyText
+  BenefitName: MyText
+  CopayInntier1: MyText
+  CopayInntier2: MyText
+  CopayOutofNet: MyText
+  CoinsInntier1: MyText
+  CoinsInntier2: MyText
+  CoinsOutofNet: MyText
+  IsEHB: MyText
+  IsStateMandate: MyText
+  IsCovered: MyText
+  QuantLimitOnSvc: MyText
+  LimitQty: MyText
+  LimitUnit: MyText
+  MinimumStay: MyText
+  Exclusions: MyText
+  Explanation: MyText
+  EHBVarReason: MyText
+  IsSubjtoDedtier1: MyText
+  IsSubjtoDedtier2: MyText
+  IsExclFromInnMOOP: MyText
+  IsExclFromOonMOOP: MyText
+  RowNumber: MyText

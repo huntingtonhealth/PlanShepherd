@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  STATE: MyString
+  STATE_FIPS: MyString
+  COUNTY_FIPS: MyString
+  COUNTY_NAME: MyString
+  COUNTY_FP: MyString
+
+two:
+  STATE: MyString
+  STATE_FIPS: MyString
+  COUNTY_FIPS: MyString
+  COUNTY_NAME: MyString
+  COUNTY_FP: MyString

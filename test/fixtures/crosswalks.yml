@@ -1,0 +1,47 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  State: MyText
+  DentalPlan: MyText
+  PlanID_2016: MyText
+  IssuerID_2016: MyText
+  MultistatePlan_2016: MyText
+  MetalLevel_2016: MyText
+  ChildAdultOnly_2016: MyText
+  FIPSCode: MyText
+  ZipCode: MyText
+  CrosswalkLevel: MyText
+  ReasonForCrosswalk: MyText
+  PlanID_2017: MyText
+  IssuerID_2017: MyText
+  MultistatePlan_2017: MyText
+  MetalLevel_2017: MyText
+  ChildAdultOnly_2017: MyText
+  AgeOffPlanID_2017: MyText
+  IssuerID_AgeOff2017: MyText
+  MultistatePlan_AgeOff2017: MyText
+  Metallevel_AgeOff2017: MyText
+  ChildAdultOnly_AgeOff2017: MyText
+
+two:
+  State: MyText
+  DentalPlan: MyText
+  PlanID_2016: MyText
+  IssuerID_2016: MyText
+  MultistatePlan_2016: MyText
+  MetalLevel_2016: MyText
+  ChildAdultOnly_2016: MyText
+  FIPSCode: MyText
+  ZipCode: MyText
+  CrosswalkLevel: MyText
+  ReasonForCrosswalk: MyText
+  PlanID_2017: MyText
+  IssuerID_2017: MyText
+  MultistatePlan_2017: MyText
+  MetalLevel_2017: MyText
+  ChildAdultOnly_2017: MyText
+  AgeOffPlanID_2017: MyText
+  IssuerID_AgeOff2017: MyText
+  MultistatePlan_AgeOff2017: MyText
+  Metallevel_AgeOff2017: MyText
+  ChildAdultOnly_AgeOff2017: MyText

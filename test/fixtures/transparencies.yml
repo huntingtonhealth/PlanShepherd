@@ -1,0 +1,37 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  State: MyText
+  IssuerName: MyText
+  IssuerID: MyText
+  IssuerDBAIfApplicable: MyText
+  URLClaimsPolicies: MyText
+  NumberOfClaims2015: MyText
+  NumberOfClaimsDenials: MyText
+  NumberOfInternalAppealsFiled: MyText
+  NumberOfInternalAppealsOverturned: MyText
+  PercentOfInternalAppealsOverturned: MyText
+  NumberOfExternalAppealsFiled: MyText
+  NumberOfExternalAppealsOverturned: MyText
+  PercentOfExternalAppealsOverturned: MyText
+  FinancialInformation: MyText
+  EnrollmentData: MyText
+  DisenrollmentData: MyText
+
+two:
+  State: MyText
+  IssuerName: MyText
+  IssuerID: MyText
+  IssuerDBAIfApplicable: MyText
+  URLClaimsPolicies: MyText
+  NumberOfClaims2015: MyText
+  NumberOfClaimsDenials: MyText
+  NumberOfInternalAppealsFiled: MyText
+  NumberOfInternalAppealsOverturned: MyText
+  PercentOfInternalAppealsOverturned: MyText
+  NumberOfExternalAppealsFiled: MyText
+  NumberOfExternalAppealsOverturned: MyText
+  PercentOfExternalAppealsOverturned: MyText
+  FinancialInformation: MyText
+  EnrollmentData: MyText
+  DisenrollmentData: MyText

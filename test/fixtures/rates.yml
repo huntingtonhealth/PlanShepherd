@@ -1,0 +1,51 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  BusinessYear: MyText
+  StateCode: MyText
+  IssuerID: MyText
+  SourceName: MyText
+  VersionNum: MyText
+  ImportDate: 2017-09-12 15:05:58
+  FederalTIN: MyText
+  RateEffectiveDate: 2017-09-12
+  RateExpirationDate: 2017-09-12
+  PlanID: MyText
+  RatingAreaID: MyText
+  Tobacco: MyText
+  Age: MyText
+  IndividualRate: MyText
+  IndividualTobaccoRate: MyText
+  Couple: MyText
+  PrimarySubscriberAndOneDependent: MyText
+  PrimarySubscriberAndTwoDependents: MyText
+  PrimarySubscriberAndThreeOrMoreDependents: MyText
+  CoupleAndOneDependent: MyText
+  CoupleAndTwoDependents: MyText
+  CoupleAndThreeOrMoreDependents: MyText
+  RowNumber: MyText
+
+two:
+  BusinessYear: MyText
+  StateCode: MyText
+  IssuerID: MyText
+  SourceName: MyText
+  VersionNum: MyText
+  ImportDate: 2017-09-12 15:05:58
+  FederalTIN: MyText
+  RateEffectiveDate: 2017-09-12
+  RateExpirationDate: 2017-09-12
+  PlanID: MyText
+  RatingAreaID: MyText
+  Tobacco: MyText
+  Age: MyText
+  IndividualRate: MyText
+  IndividualTobaccoRate: MyText
+  Couple: MyText
+  PrimarySubscriberAndOneDependent: MyText
+  PrimarySubscriberAndTwoDependents: MyText
+  PrimarySubscriberAndThreeOrMoreDependents: MyText
+  CoupleAndOneDependent: MyText
+  CoupleAndTwoDependents: MyText
+  CoupleAndThreeOrMoreDependents: MyText
+  RowNumber: MyText

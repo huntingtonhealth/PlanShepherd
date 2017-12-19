@@ -1,0 +1,67 @@
+<h1>Plans#index</h1>
+
+<table class="screening_results">
+	<%= @nAdults %>
+	<%= @nKids %>
+	<% @plans.each do |plan| %>
+		<tr><td colspan="3"><h2><%= plan.PlanMarketingName %></h2></td></tr>
+		<tr><td colspan="3"><%= plan.PlanMarketingName %></td></tr>
+		<tr>
+			<td>Monthly Payment</td>
+			<td>Other Costs</td>
+			<td>Estimated Total Cost This Year</td>
+		</tr>
+		<tr>
+			<td>
+			<% if @nAdults == 1 %>
+				<% if @nKids == 0 %>
+					<%= plan.IndividualRate %>
+				<% elsif @nKids == 1%>
+					<%= plan.PrimarySubscriberAndOneDependent %>
+				<% elsif @nKids == 2%>
+					<%= plan.PrimarySubscriberAndTwoDependents %>
+				<% elsif @nKids > 2%>
+					<%= plan.PrimarySubscriberAndThreeOrMoreDependents %>
+				<% end %>
+			<% elsif @nAdults == 2 %>
+				<% if @nKids == 0 %>
+					<%= plan.Couple %>
+				<% elsif @nKids == 1%>
+					<%= plan.CoupleAndOneDependent %>
+				<% elsif @nKids == 2%>
+					<%= plan.CoupleAndTwoDependents %>
+				<% elsif @nKids > 2%>
+					<%= plan.CoupleAndThreeOrMoreDependents %>
+				<% end %>
+			<% end %>			
+			</td>
+			<td>
+			<table>
+				<tr>
+					<td>Your total deductible is:</td>
+					<td>
+						<% if plan.TEHBDedInnTier1Individual %>
+							<%= plan.TEHBDedInnTier1Individual %>
+						<% else %>
+							<%= plan.MEHBDedInnTier1Individual%>
+						<% end %>
+					</td>
+				</tr>
+				<tr>
+					<td>The most you could pay this year is:</td>
+					<td>
+						<% if plan.TEHBInnTier1IndividualMOOP %>
+							<%= plan.TEHBInnTier1IndividualMOOP %>
+						<% else %>
+							<%= plan.MEHBInnTier1IndividualMOOP %>
+						<% end %>
+					</td>
+				</tr>
+			</table>
+			</td>
+			
+			<td><%= plan.IndividualRate.to_f * 12 + 355 %></td>
+		</tr>
+		<tr><td colspan="3" style="background-color:powderblue;"><br /><br /></td></tr>
+	<% end %>
+</table>

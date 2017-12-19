@@ -1,0 +1,33 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  BusinessYear: MyText
+  StateCode: MyText
+  IssuerID: 
+  SourceName: MyText
+  ImportDate: 2017-09-12 14:36:58
+  ServiceAreaID: MyText
+  ServiceAreaName: MyText
+  CoverEntireState: MyText
+  County: MyText
+  PartialCounty: MyText
+  ZipCodes: MyText
+  PartialCountyJustification: MyText
+  MarketCoverage: MyText
+  DentalOnlyPlan: MyText
+
+two:
+  BusinessYear: MyText
+  StateCode: MyText
+  IssuerID: 
+  SourceName: MyText
+  ImportDate: 2017-09-12 14:36:58
+  ServiceAreaID: MyText
+  ServiceAreaName: MyText
+  CoverEntireState: MyText
+  County: MyText
+  PartialCounty: MyText
+  ZipCodes: MyText
+  PartialCountyJustification: MyText
+  MarketCoverage: MyText
+  DentalOnlyPlan: MyText

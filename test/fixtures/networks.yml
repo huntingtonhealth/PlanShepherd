@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  BusinessYear: MyText
+  IssuerID: MyText
+  SourceName: MyText
+  ImportDate: 2017-09-12 14:30:25
+  NetworkName: MyText
+  NetworkID: MyText
+  NetworkURL: MyText
+  MarketCoverage: MyText
+  DentalOnlyPlanIndicator: MyText
+
+two:
+  BusinessYear: MyText
+  IssuerID: MyText
+  SourceName: MyText
+  ImportDate: 2017-09-12 14:30:25
+  NetworkName: MyText
+  NetworkID: MyText
+  NetworkURL: MyText
+  MarketCoverage: MyText
+  DentalOnlyPlanIndicator: MyText

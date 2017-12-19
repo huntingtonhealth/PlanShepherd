@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  FULLZIP: MyString
+  ZIP: MyString
+  COUNTY: MyString
+  RES_RATIO: 1.5
+  BUS_RATIO: 1.5
+  OTH_RATIO: 1.5
+  TOT_RATIO: 1.5
+  COUNTY_NAME: MyString
+  RATING_AREA: MyString
+
+two:
+  FULLZIP: MyString
+  ZIP: MyString
+  COUNTY: MyString
+  RES_RATIO: 1.5
+  BUS_RATIO: 1.5
+  OTH_RATIO: 1.5
+  TOT_RATIO: 1.5
+  COUNTY_NAME: MyString
+  RATING_AREA: MyString

@@ -1,0 +1,49 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  BusinessYear: MyText
+  StateCode: MyText
+  IssuerID: MyText
+  SourceName: MyText
+  VersionNum: MyText
+  ImportDate: 
+  TIN: MyText
+  ProductID: MyText
+  StandardComponentID: MyText
+  EnrolleeContractRateDeterminationRule: MyText
+  twoParentFamilyMaxDependentsRule: MyText
+  SingleParentFamilyMaxDependentsRule: MyText
+  DependentMaximumAgeRule: MyText
+  ChildrenOnlyContractMaxChildrenRule: MyText
+  DomesticPartnerAsSpouseIndicator: MyText
+  SameSexPartnerAsSpouseIndicator: MyText
+  AgeDeterminationRule: MyText
+  MinimumtobaccoFreeMonthsRule: MyText
+  CohabitationRule: MyText
+  RowNumber: MyText
+  MarketCoverage: MyText
+  DentalOnlyPlan: MyText
+
+two:
+  BusinessYear: MyText
+  StateCode: MyText
+  IssuerID: MyText
+  SourceName: MyText
+  VersionNum: MyText
+  ImportDate: 
+  TIN: MyText
+  ProductID: MyText
+  StandardComponentID: MyText
+  EnrolleeContractRateDeterminationRule: MyText
+  twoParentFamilyMaxDependentsRule: MyText
+  SingleParentFamilyMaxDependentsRule: MyText
+  DependentMaximumAgeRule: MyText
+  ChildrenOnlyContractMaxChildrenRule: MyText
+  DomesticPartnerAsSpouseIndicator: MyText
+  SameSexPartnerAsSpouseIndicator: MyText
+  AgeDeterminationRule: MyText
+  MinimumtobaccoFreeMonthsRule: MyText
+  CohabitationRule: MyText
+  RowNumber: MyText
+  MarketCoverage: MyText
+  DentalOnlyPlan: MyText

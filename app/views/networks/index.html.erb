@@ -1,0 +1,10 @@
+<h1>Networks#index</h1>
+
+<table>
+	<% @networks.each do |network| %>
+		<tr>
+			<td><%= network.NetworkId %></td>
+			<td><%= network.NetworkName %></td>
+		</tr>
+	<% end %>
+</table>

@@ -1,0 +1,2 @@
+class Transparency < ApplicationRecord
+end

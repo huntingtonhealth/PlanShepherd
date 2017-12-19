@@ -1,0 +1,21 @@
+<% if @zips.size > 1 %>
+
+
+	<div style="display: inline;">
+		<%= collection_select(nil, :county, @zips.order('RES_RATIO DESC'), :COUNTY, :COUNTY_NAME, {:selected => "#{params[:county]}"}) %>
+	</div>
+	<div id="showState" style="display: inline;"> 
+		<%= render partial: 'countycoll2' %>
+	</div>
+
+	
+<% else %>
+
+	<div style="display: none;" id="countySelect">
+		<%= collection_select(nil, :county, @zips.order('RES_RATIO DESC'), :COUNTY, :COUNTY_NAME, {:selected => "#{params[:county]}"}) %>
+	</div>
+	<div id="showState" style="display: inline;"> 
+		<%= render partial: 'countycoll2' %>
+	</div>
+	
+<% end %>
