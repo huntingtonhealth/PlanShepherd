@@ -47,8 +47,8 @@ ActiveRecord::Schema.define(version: 20171023173153) do
     t.text     "RowNumber"
     t.datetime "created_at",          null: false
     t.datetime "updated_at",          null: false
-    t.index ["PlanId"], name: "index_bencostshares_on_PlanID"
-    t.index ["StandardComponentId"], name: "index_bencostshares_on_StandardComponentID"
+    t.index ["PlanId"], name: "index_bencostshares_on_PlanID", limit: 255
+    t.index ["StandardComponentId"], name: "index_bencostshares_on_StandardComponentID", limit: 255
   end
 
   create_table "businessrules", force: :cascade do |t|
@@ -77,9 +77,8 @@ ActiveRecord::Schema.define(version: 20171023173153) do
     t.text     "DentalOnlyPlan"
     t.datetime "created_at",                            null: false
     t.datetime "updated_at",                            null: false
-    t.index ["StandardComponentId"], name: "index_businessrules_on_StandardComponentID"
-    t.index ["TIN"], name: "index_businessrules_on_TIN"
-    t.index [nil], name: "index_businessrules_on_PlanID"
+    t.index ["StandardComponentId"], name: "index_businessrules_on_StandardComponentID", limit: 255
+    t.index ["TIN"], name: "index_businessrules_on_TIN", limit: 255
   end
 
   create_table "crosswalks", force: :cascade do |t|
@@ -106,7 +105,7 @@ ActiveRecord::Schema.define(version: 20171023173153) do
     t.text     "ChildAdultOnly_AgeOff2017"
     t.datetime "created_at",                null: false
     t.datetime "updated_at",                null: false
-    t.index ["PlanID_2017"], name: "index_crosswalks_on_PlanID_2017"
+    t.index ["PlanID_2017"], name: "index_crosswalks_on_PlanID_2017", limit: 255
   end
 
   create_table "networks", force: :cascade do |t|
@@ -284,7 +283,7 @@ ActiveRecord::Schema.define(version: 20171023173153) do
     t.text     "RowNumber"
     t.datetime "created_at",                                                   null: false
     t.datetime "updated_at",                                                   null: false
-    t.index ["NetworkId"], name: "index_plans_on_NetworkId"
+    t.index ["NetworkId"], name: "index_plans_on_NetworkId", limit: 255
   end
 
   create_table "qualities", force: :cascade do |t|
@@ -300,7 +299,7 @@ ActiveRecord::Schema.define(version: 20171023173153) do
     t.text     "NotRatedReason_ClinicalQualityManagementRatingDesc"
     t.datetime "created_at",                                                     null: false
     t.datetime "updated_at",                                                     null: false
-    t.index ["PlanID"], name: "index_qualities_on_PlanID"
+    t.index ["PlanID"], name: "index_qualities_on_PlanID", limit: 255
   end
 
   create_table "rates", force: :cascade do |t|
@@ -330,8 +329,8 @@ ActiveRecord::Schema.define(version: 20171023173153) do
     t.text     "RowNumber"
     t.datetime "created_at",                                null: false
     t.datetime "updated_at",                                null: false
-    t.index ["FederalTIN"], name: "index_rates_on_FederalTIN"
-    t.index ["PlanId"], name: "index_rates_on_PlanID"
+    t.index ["FederalTIN"], name: "index_rates_on_FederalTIN", limit: 255
+    t.index ["PlanId"], name: "index_rates_on_PlanID", limit: 255
   end
 
   create_table "serviceareas", force: :cascade do |t|
