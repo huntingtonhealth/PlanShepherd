@@ -12,7 +12,7 @@ default: &default
   database: db/planshepherd_dev
   pool: 5
   username: root
-  password: Planshepherd!
+  password: Planshepherd1
   timeout: 5000
 
 development:
