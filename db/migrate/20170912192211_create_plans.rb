@@ -162,8 +162,8 @@ class CreatePlans < ActiveRecord::Migration[5.0]
       t.timestamps
     end
     
-    add_index :plans, :NetworkId
-    add_foreign_key :plans, :networks
+    add_index :plans, :NetworkId, :length => 255
+    add_foreign_key :plans, :networks, :length => 255
     
   end
 end

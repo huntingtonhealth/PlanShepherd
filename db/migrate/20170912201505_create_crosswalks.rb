@@ -26,8 +26,8 @@ class CreateCrosswalks < ActiveRecord::Migration[5.0]
       t.timestamps
     end
     
-    add_index :crosswalks, :PlanID_2017
-    add_foreign_key :crosswalks, :plans
+    add_index :crosswalks, :PlanID_2017, :length => 255
+    add_foreign_key :crosswalks, :plans, :length => 255
     
   end
 end

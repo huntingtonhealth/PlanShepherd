@@ -29,9 +29,9 @@ class CreateRates < ActiveRecord::Migration[5.0]
       t.timestamps
     end
     
-    add_index :rates, :PlanID
-    add_index :rates, :FederalTIN
-    add_foreign_key :rates, :plans
+    add_index :rates, :PlanID, :length => 255
+    add_index :rates, :FederalTIN, :length => 255
+    add_foreign_key :rates, :plans, :length => 255
     
   end
 end

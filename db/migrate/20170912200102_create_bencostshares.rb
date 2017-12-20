@@ -37,9 +37,9 @@ class CreateBencostshares < ActiveRecord::Migration[5.0]
       t.timestamps
     end
     
-    add_index :bencostshares, :PlanID
-    add_index :bencostshares, :StandardComponentID
-    add_foreign_key :bencostshares, :plans
+    add_index :bencostshares, :PlanID, :length => 255
+    add_index :bencostshares, :StandardComponentID, :length => 255
+    add_foreign_key :bencostshares, :plans, :length => 255
     
   end
 end

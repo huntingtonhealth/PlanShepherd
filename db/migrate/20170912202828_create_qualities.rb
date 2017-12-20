@@ -15,8 +15,8 @@ class CreateQualities < ActiveRecord::Migration[5.0]
       t.timestamps
     end
     
-    add_index :qualities, :PlanID
-    add_foreign_key :qualities, :plans
+    add_index :qualities, :PlanID, :length => 255
+    add_foreign_key :qualities, :plans, :length => 255
     
   end
 end

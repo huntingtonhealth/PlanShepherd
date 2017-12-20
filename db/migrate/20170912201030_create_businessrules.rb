@@ -28,10 +28,10 @@ class CreateBusinessrules < ActiveRecord::Migration[5.0]
       t.timestamps
     end
     
-    add_index :businessrules, :PlanID
-    add_index :businessrules, :StandardComponentID
-    add_index :businessrules, :TIN
-    add_foreign_key :businessrules, :plans
+    add_index :businessrules, :PlanID, :length => 255
+    add_index :businessrules, :StandardComponentID, :length => 255
+    add_index :businessrules, :TIN, :length => 255
+    add_foreign_key :businessrules, :plans, :length => 255
     
   end
 end
