@@ -8,9 +8,9 @@ end
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.0.3'
-# Use sqlite3 as the database for Active Record
+# Default sqlite3 as the database for Active Record; change to postgres
 #gem 'sqlite3'
-gem 'mysql2'
+gem 'pg'
 #gem 'activerecord-mysql2-adapter'
 # Use Puma as the app server
 gem 'puma', '~> 3.0'
