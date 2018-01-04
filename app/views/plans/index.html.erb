@@ -4,8 +4,8 @@
 	<%= @nAdults %>
 	<%= @nKids %>
 	<% @plans.each do |plan| %>
-		<tr><td colspan="3"><h2><%= plan.PlanMarketingName %></h2></td></tr>
-		<tr><td colspan="3"><%= plan.PlanMarketingName %></td></tr>
+		<tr><td colspan="3"><h2><%= plan.planmarketingname %></h2></td></tr>
+		<tr><td colspan="3"><%= plan.planmarketingname %></td></tr>
 		<tr>
 			<td>Monthly Payment</td>
 			<td>Other Costs</td>
@@ -15,23 +15,23 @@
 			<td>
 			<% if @nAdults == 1 %>
 				<% if @nKids == 0 %>
-					<%= plan.IndividualRate %>
+					<%= plan.individualrate %>
 				<% elsif @nKids == 1%>
-					<%= plan.PrimarySubscriberAndOneDependent %>
+					<%= plan.primarysubscriberandonedependent %>
 				<% elsif @nKids == 2%>
-					<%= plan.PrimarySubscriberAndTwoDependents %>
+					<%= plan.primarysubscriberandtwodependents %>
 				<% elsif @nKids > 2%>
-					<%= plan.PrimarySubscriberAndThreeOrMoreDependents %>
+					<%= plan.primarysubscriberandthreeormoredependents %>
 				<% end %>
 			<% elsif @nAdults == 2 %>
 				<% if @nKids == 0 %>
-					<%= plan.Couple %>
+					<%= plan.couple %>
 				<% elsif @nKids == 1%>
-					<%= plan.CoupleAndOneDependent %>
+					<%= plan.coupleandonedependent %>
 				<% elsif @nKids == 2%>
-					<%= plan.CoupleAndTwoDependents %>
+					<%= plan.coupleandtwodependents %>
 				<% elsif @nKids > 2%>
-					<%= plan.CoupleAndThreeOrMoreDependents %>
+					<%= plan.coupleandthreeormoredependents %>
 				<% end %>
 			<% end %>			
 			</td>
@@ -40,27 +40,27 @@
 				<tr>
 					<td>Your total deductible is:</td>
 					<td>
-						<% if plan.TEHBDedInnTier1Individual %>
-							<%= plan.TEHBDedInnTier1Individual %>
+						<% if plan.tehbdedinntier1individual %>
+							<%= plan.tehbdedinntier1individual %>
 						<% else %>
-							<%= plan.MEHBDedInnTier1Individual%>
+							<%= plan.mehbdedinntier1individual %>
 						<% end %>
 					</td>
 				</tr>
 				<tr>
 					<td>The most you could pay this year is:</td>
 					<td>
-						<% if plan.TEHBInnTier1IndividualMOOP %>
-							<%= plan.TEHBInnTier1IndividualMOOP %>
+						<% if plan.tehbinntier1individualmoop %>
+							<%= plan.tehbinntier1individualmoop %>
 						<% else %>
-							<%= plan.MEHBInnTier1IndividualMOOP %>
+							<%= plan.mehbinntier1individualmoop %>
 						<% end %>
 					</td>
 				</tr>
 			</table>
 			</td>
 			
-			<td><%= plan.IndividualRate.to_f * 12 + 355 %></td>
+			<td><%= plan.individualrate.to_f * 12 + 355 %></td>
 		</tr>
 		<tr><td colspan="3" style="background-color:powderblue;"><br /><br /></td></tr>
 	<% end %>

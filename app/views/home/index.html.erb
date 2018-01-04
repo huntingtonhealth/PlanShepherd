@@ -20,7 +20,7 @@
 			<%= form_tag(plans_path, method: 'get', action: 'screen') do %>
 				<h3>First, tell us your zip code</h3>
 				<div id="enterZip">
-					<%= text_field_tag :ZIP, nil, placeholder: "ZIP Code", id: "zipBlur"%>
+					<%= text_field_tag :zip, nil, placeholder: "ZIP Code", id: "zipBlur"%>
 					<div id="showCounties"> 
 						<%= render partial: 'countycoll' %>
 					</div> <br /><br />

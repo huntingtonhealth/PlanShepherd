@@ -7,8 +7,8 @@ class HomeController < ApplicationController
   end
   
   def update_zips
-    @zips = Zipmapping.where("zipmappings.FULLZIP = ?", params[:ZIP])
-    @state = @zips.order('RES_RATIO DESC').first
+    @zips = Zipmapping.where('"fullzip" = ?', params[:zip])
+    @state = @zips.order('res_ratio DESC').first
     respond_to do |format|
       format.html
       format.js
@@ -16,7 +16,7 @@ class HomeController < ApplicationController
   end
   
   def update_state
-    @state = Zipmapping.where("zipmappings.FULLZIP = ? AND zipmappings.COUNTY = ?", params[:ZIP], params[:county]).first
+    @state = Zipmapping.where('fullzip = ? AND county = ?', params[:zip], params[:county]).first
     respond_to do |format|
       format.html
       format.js

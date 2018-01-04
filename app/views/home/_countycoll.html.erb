@@ -2,7 +2,7 @@
 
 
 	<div style="display: inline;">
-		<%= collection_select(nil, :county, @zips.order('RES_RATIO DESC'), :COUNTY, :COUNTY_NAME, {:selected => "#{params[:county]}"}) %>
+		<%= collection_select(nil, :county, @zips.order('res_ratio DESC'), :county, :county_name, {:selected => "#{params[:county]}"}) %>
 	</div>
 	<div id="showState" style="display: inline;"> 
 		<%= render partial: 'countycoll2' %>
@@ -12,7 +12,7 @@
 <% else %>
 
 	<div style="display: none;" id="countySelect">
-		<%= collection_select(nil, :county, @zips.order('RES_RATIO DESC'), :COUNTY, :COUNTY_NAME, {:selected => "#{params[:county]}"}) %>
+		<%= collection_select(nil, :county, @zips.order('res_ratio DESC'), :county, :county_name, {:selected => "#{params[:county]}"}) %>
 	</div>
 	<div id="showState" style="display: inline;"> 
 		<%= render partial: 'countycoll2' %>

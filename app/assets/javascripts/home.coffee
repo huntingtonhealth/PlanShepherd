@@ -21,7 +21,7 @@ $(document).ready ->
 	$("#zipBlur").blur ->
 		$.ajax
 			url: '/home/update_zips'
-			data: ZIP: $('#zipBlur').val()
+			data: zip: $('#zipBlur').val()
 			dataType: 'script'
 		$("#showCounties").css("display", "inline")
 		

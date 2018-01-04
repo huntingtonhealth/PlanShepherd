@@ -72,8 +72,8 @@ namespace :import do
 	
 	desc "Import plan Crosswalks from CSV"
 	task :crosswalks => :environment do
-		progress_bar = ProgressBar.new(CSV.read("db/PUFs/Plan_ID_Crosswalk.CSV", headers: true, :encoding => 'windows-1251:utf-8').length)				
-		CSV.foreach("db/PUFs/Plan_ID_Crosswalk.CSV", headers: true, :encoding => 'windows-1251:utf-8') do |row|
+		progress_bar = ProgressBar.new(CSV.read("db/PUFs/Plan_ID_Crosswalk_PUF.CSV", headers: true, :encoding => 'windows-1251:utf-8').length)				
+		CSV.foreach("db/PUFs/Plan_ID_Crosswalk_PUF.CSV", headers: true, :encoding => 'windows-1251:utf-8') do |row|
 			crosswalk = Crosswalk.create!(row.to_hash)
 			progress_bar.increment
 		end
