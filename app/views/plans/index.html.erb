@@ -1,8 +1,6 @@
 <h1>Plans#index</h1>
 
 <table class="screening_results">
-	<%= @nAdults %>
-	<%= @nKids %>
 	<% @plans.each do |plan| %>
 		<tr><td colspan="3"><h2><%= plan.planmarketingname %></h2></td></tr>
 		<tr><td colspan="3"><%= plan.planmarketingname %></td></tr>
@@ -13,27 +11,11 @@
 		</tr>
 		<tr>
 			<td>
-			<% if @nAdults == 1 %>
-				<% if @nKids == 0 %>
-					<%= plan.individualrate %>
-				<% elsif @nKids == 1%>
-					<%= plan.primarysubscriberandonedependent %>
-				<% elsif @nKids == 2%>
-					<%= plan.primarysubscriberandtwodependents %>
-				<% elsif @nKids > 2%>
-					<%= plan.primarysubscriberandthreeormoredependents %>
-				<% end %>
-			<% elsif @nAdults == 2 %>
-				<% if @nKids == 0 %>
-					<%= plan.couple %>
-				<% elsif @nKids == 1%>
-					<%= plan.coupleandonedependent %>
-				<% elsif @nKids == 2%>
-					<%= plan.coupleandtwodependents %>
-				<% elsif @nKids > 2%>
-					<%= plan.coupleandthreeormoredependents %>
-				<% end %>
-			<% end %>			
+			<% if @tobacco == "Yes" %>
+				<%= plan.individualtobaccorate %>
+			<% elsif %>
+				<%= plan.individualrate %>
+			<% end %>
 			</td>
 			<td>
 			<table>

@@ -37,4 +37,16 @@ class HomeController < ApplicationController
     end
   end
   
+  def addspouse
+    respond_to do |format|               
+        format.js
+    end        
+  end 
+  
+  def adddependent
+    respond_to do |format|               
+        format.js
+    end        
+  end
+  
 end

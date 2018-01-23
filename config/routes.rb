@@ -3,7 +3,8 @@ Rails.application.routes.draw do
   #home routes for ajax calls
 	get 'home/update_zips' => 'home#update_zips'
 	get 'home/update_state' => 'home#update_state'
-	get 'home/familyComp' => 'home#familyComp'
+	get 'home/addspouse' => 'home#addspouse'
+	get 'home/adddependent' => 'home#adddependent'
 	get 'home/index'
   root :to => 'home#index'
   

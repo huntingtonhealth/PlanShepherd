@@ -15,9 +15,13 @@
 
 <body id="page-top" class="index">
 	<section class="main">
+		
 		<div class = "screen">
-				
+			<h1> Quick Screen </h1>	
 			<%= form_tag(plans_path, method: 'get', action: 'screen') do %>
+			
+				<%= hidden_field_tag :workflow, "quickscreen" %>
+				
 				<h3>First, tell us your zip code</h3>
 				<div id="enterZip">
 					<%= text_field_tag :zip, nil, placeholder: "ZIP Code", id: "zipBlur"%>
@@ -26,119 +30,82 @@
 					</div> <br /><br />
 				</div>
 				
-				<h3>Who are you shopping for insurance for?</h3>
+				<h3>A Couple Questions About You</h3>
 				<div id="familyComp">
-				<!-- =begin	
 					<table>
-						<tr colspan="2">
-							<td><b>You:</b></td>
-						</tr>
 						<tr>
 							<td> Age </td>
-							<td> Tobacco Usage </td>
-						</tr>
+							<td> <%= text_field_tag :age, nil, placeholder: "ex: 41", id: "age" %> </td>
+						</tr>	
 						<tr>
-							<td> <%= text_field_tag :PrimAge, nil, placeholder: "ex: 41", id: "age" %> </td>
-							<%= hidden_field_tag :PrimTobacco, "No" %>
-							<td> <%= check_box_tag :PrimTobacco, "Yes", false %> </td>
-						</tr>
-						<tr colspan="2">
-							<td><b>Your Spouse:</b></td>
-						</tr>
-						<tr>
-							<td> Age </td>
-							<td> Tobacco Usage </td>
-						</tr>
-						<tr>
-							<td> <%= text_field_tag :PartAge, nil, placeholder: "ex: 41", id: "age" %> </td>
-							<%= hidden_field_tag :PartTobacco, "No" %>
-							<td> <%= check_box_tag :PartTobacco, "Yes", false %> </td>
+							<td> Do you smoke or use other tobacco products? </td>
+							<td> 
+								<%= hidden_field_tag :tobacco, "No" %>
+								<%= check_box_tag :tobacco, "Yes", false %> 
+								<%= label_tag(:tobacco, "Yes") %> 
+							</td>
 						</tr>
 					</table>
-				=end -->								
-
-					<%= radio_button_tag(:familyComp, "self", false, id: 'familyComp') %>
-					<%= label_tag(:familyComp, "Just me") %>
-					<%= radio_button_tag(:familyComp, "family", false, id: 'familyComp') %>
-					<%= label_tag(:familyComp, "Myself and my family") %>
-					<%= radio_button_tag(:familyComp, "kids", false ,id: 'familyComp') %>
-					<%= label_tag(:familyComp, "Just my kids") %><br />
-					<div id="familyCompPt2"></div><br />
 				</div>
 				
 				<h3>One last thing... do you want to see dental-only insurance plans?</h3>
-				<%= hidden_field_tag :Dental, "No" %>
-				<%= check_box_tag :Dental, "Yes", false %>
-				<%= label_tag(:Dental, "Yes, show me just dental plans") %> <br /><br />
+				<%= hidden_field_tag :dental, "No" %>
+				<%= check_box_tag :dental, "Yes", false %>
+				<%= label_tag(:dental, "Yes, show me just dental plans") %> <br /><br />
 				
 				<%= submit_tag 'Screen', :name=> nil %> 
-			<% end %> <br />
+				<% end %> <br />
 		</div>	
 	
-	<!-- =begin 
-	<div class = "navigate">
+	<hr>	
+	
+		<div class = "navigate">
+			<h1> Navigate </h1>
+			<%= form_tag(plans_path, method: 'get', action: 'navigate') do %>
+				
+				<%= hidden_field_tag :workflow, "navigate" %>
+				
+				<h3>First, tell us your zip code</h3>
+				<div id="enterZip">
+					<%= text_field_tag :zip, nil, placeholder: "ZIP Code", id: "zipBlur"%>
+					<div id="showCounties"> 
+						<%= render partial: 'countycoll' %>
+					</div> <br /><br />
+				</div>
+				
+				<h3>Now tell us about yourself </h3>
+				<div id="primary">
+					<table>
+						<tr>
+							<td> Age </td>
+							<td> <%= text_field_tag :age, nil, placeholder: "ex: 41", id: "age" %> </td>
+						</tr>	
+						<tr>
+							<td> Do you smoke or use other tobacco products? </td>
+							<td> 
+								<%= hidden_field_tag :tobacco, "No" %>
+								<%= check_box_tag :tobacco, "Yes", false %> 
+								<%= label_tag(:tobacco, "Yes") %> 
+							</td>
+						</tr>
+					</table>
+				</div>
+				
+				<h3>Next, tell us about anyone else you want to find coverage for </h3>
+				<div id="familycomp">
+					<h4> Your Spouse </h4>
+					<div id="spouse">
+						<button type="button" id="addspouse" > Add Spouse </button>
+					</div>
+					<h4> Your Dependents </h4>
+					<div id="dependents">
+						<button type="button" id="adddependent"> Add Dependent </button>
+					</div>
+				</div>
 			
-		<%= form_tag(plans_path, method: 'get', action: 'screen2') do %>
-			<h3>First, tell us your zip code</h3>
-			<div id="enterZip">
-				<%= text_field_tag :ZIP, "ZIP Code", id: "zipBlur"%>
-				<div id="showCounties"> 
-					<%= render partial: 'countycoll' %>
-				</div> <br /><br />
-			</div>
-			
-			<h3>Basic Information</h3>
-			What is your age?<br \>
-			<%= text_field_tag :primaryAge, "Age"%><br \><br \>
-			
-			What is your sex? <br \>
-			<%= select_tag(:primarySex, options_for_select([['Male', 'male'], ['Female', 'female']]), id: "primarySex") %> <br \><br \>
-							
-			<%= radio_button_tag(:SHOP, "Individual") %>
-			<%= label_tag(:SHOP, "I'm looking for independent insurance for myself/my family") %>
-			<%= radio_button_tag(:SHOP, "SHOP (Small Group)") %>
-			<%= label_tag(:SHOP, "I'm looking for insurance through my employer") %> <br /><br />
-			
-			<h3>Household</h3>
-			Spouse or Domestic Partner? <br />
-			<%= text_field_tag :partnerAge, "Age"%><br \>
-			<%= select_tag(:partnerSex, options_for_select([['Male', 'male'], ['Female', 'female']]), id:"partnerSex") %> <br \><br \><br \>
-			<div id="sexMatch">
-			</div>
-			
-			Dependents? <br />
-			<div id="dep1">
-				<%= text_field_tag :dep1Age, "Age"%><br \>
-				<%= select_tag(:dep1sex, options_for_select([['Male', 'male'], ['Female', 'female']]), id:"dep1Sex") %> <br \><br \><br \>		
-			</div>
-			<div id="dep2">
-				<%= text_field_tag :dep2Age, "Age"%><br \>
-				<%= select_tag(:dep2sex, options_for_select([['Male', 'male'], ['Female', 'female']]), id:"dep2Sex") %> <br \><br \><br \>		
-			</div>
-			<div id="dep3">
-				<%= text_field_tag :dep3Age, "Age"%><br \>
-				<%= select_tag(:dep3sex, options_for_select([['Male', 'male'], ['Female', 'female']]), id:"dep3Sex") %> <br \><br \><br \>		
-			</div>
-			
-			
-			<%= radio_button_tag(:ChildAdultPlan, "Allows Adult-Only") %>
-			<%= label_tag(:ChildAdultPlan, "My family is only adults") %>
-			<%= radio_button_tag(:ChildAdultPlan, "Allows Adult and Child-Only") %>
-			<%= label_tag(:ChildAdultPlan, "My family is adults and children") %>
-			<%= radio_button_tag(:ChildAdultPlan, "Allows Child-Only") %>
-			<%= label_tag(:ChildAdultPlan, "I'm looking for Child-Only Coverage") %> <br /><br />
-			
-			<h3>Other Information</h3>
-			<%= hidden_field_tag :Dental, "No" %>
-			<%= check_box_tag :Dental, "Yes", false %>
-			<%= label_tag(:Dental, "I'm looking for dental-only plans") %> <br /><br />
-			
-			<%= submit_tag 'Screen', :name=> nil %> 
-		<% end %> <br />
-	</div>
-		
-	=end -->
-		
+			<%= submit_tag 'Navigate', :name=> nil %>
+			<% end %> <br />
+		</div>
 	</section>
 	
 	<footer>

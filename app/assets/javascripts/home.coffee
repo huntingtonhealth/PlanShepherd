@@ -30,11 +30,13 @@ $(document).ready ->
 			url: '/home/update_state'
 			data: county: $('#_county').val(), ZIP: $('#zipBlur').val()
 			dataType: 'script'
-		
-	$('#familyComp input[type=radio]').click ->
+	
+	$("#addspouse").click ->
 		$.ajax
-			url: '/home/familyComp'
-			data: familyComp: document.querySelector('input[name="familyComp"]:checked').value
+			url: '/home/addspouse'
 			dataType: 'script'
-		$("#familyComp").css("display", "inline")
-		
+			
+	$("#adddependent").click ->
+		$.ajax
+			url: '/home/adddependent'
+			dataType: 'script'

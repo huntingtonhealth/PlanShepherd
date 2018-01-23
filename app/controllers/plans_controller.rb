@@ -1,7 +1,12 @@
 class PlansController < ApplicationController
   def index
-  		@plans = Plan.screen(params[:ZIP],params[:county], params[:state], params[:Dental], params[:age], params[:ratingarea])
-      
+    if params[:workflow] == "test"
+      @plans = Plan.search(params[:planid])
+      @tobacco = "No"
+    else
+  		@plans = Plan.screen(params[:zip],params[:county], params[:state], params[:dental], params[:age], params[:ratingarea])
+      @tobacco = params[:tobacco] 
+    end
   end
 
   def edit
