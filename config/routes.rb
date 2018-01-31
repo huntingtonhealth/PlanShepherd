@@ -7,6 +7,7 @@ Rails.application.routes.draw do
 	get 'home/adddependent' => 'home#adddependent'
 	get 'home/index'
   root :to => 'home#index'
+  get 'plans/quickscreen' => 'plans#quickscreen'
   
   resources :bencostshares
 	resources :businessrules
@@ -57,7 +58,7 @@ Rails.application.routes.draw do
 	get 'plans/edit'
 	get 'plans/new'
 	get 'plans/show'
-  get 'plans/quickscreen'
+  
 	
 	# For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

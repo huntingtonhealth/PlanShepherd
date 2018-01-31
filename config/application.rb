@@ -13,7 +13,12 @@ module PlanShepherd
     # -- all .rb files in that directory are automatically loaded.
     
     #config.active_record.whitelist_attributes = false
-    
+        config.middleware.insert_before 0, Rack::Cors do
+          allow do
+            origins '*'
+            resource '*', :headers => :any, :methods => [:get, :options]
+          end
+        end
   end
 end
 
