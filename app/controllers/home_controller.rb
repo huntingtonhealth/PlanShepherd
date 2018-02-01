@@ -15,6 +15,11 @@ class HomeController < ApplicationController
     end
   end
   
+  def update_zip
+    @zips = Zipmapping.where('"fullzip" = ?', params[:zip]).order('res_ratio DESC')
+    render json: {status: "SUCCESS", message: 'Loaded articles', data: @zips}, status: :ok
+  end
+  
   def update_state
     @state = Zipmapping.where('fullzip = ? AND county = ?', params[:zip], params[:county]).first
     respond_to do |format|

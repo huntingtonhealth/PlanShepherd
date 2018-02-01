@@ -8,6 +8,8 @@ Rails.application.routes.draw do
 	get 'home/index'
   root :to => 'home#index'
   get 'plans/quickscreen' => 'plans#quickscreen'
+	get 'home/update_zip' => 'home#update_zip'
+  
   
   resources :bencostshares
 	resources :businessrules
