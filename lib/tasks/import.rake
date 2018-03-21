@@ -96,6 +96,14 @@ namespace :import do
 		end
 	p "Zip Mappings imported"
 	end
+  
+	desc "Import FPLs from CSV"
+	task :fpls => :environment do			
+		CSV.foreach("db/PUFs/fpls.CSV", headers: true, :encoding => 'windows-1251:utf-8') do |row|
+			fpl = Fpl.create!(row.to_hash)
+		end
+	p "FPLs imported"
+	end
 	
 	desc "Run DB Import"
 	task :all => [ :networks, :serviceareas, :bencostshares, :rates, :businessrules, :qualities, :crosswalks, :plans, :zipmappings]

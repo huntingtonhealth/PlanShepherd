@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  nindivs: MyText
+  contigus: MyText
+  alaska: MyText
+  hawaii: MyText
+
+two:
+  nindivs: MyText
+  contigus: MyText
+  alaska: MyText
+  hawaii: MyText

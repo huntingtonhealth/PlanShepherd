@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  get 'fpls/index' => 'fpls#index'
+
   #home routes for ajax calls
 	get 'home/update_zips' => 'home#update_zips'
 	get 'home/update_state' => 'home#update_state'
